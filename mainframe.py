@@ -1,8 +1,8 @@
 from Tkinter import *
-
+import itchat
 class Application(Frame):
-    def say_hi(self):
-        print "hi there, everyone!"
+    def login_chat(self):
+        itchat.auto_login()
 
     def createWidgets(self):
         self.QUIT = Button(self)
@@ -13,8 +13,8 @@ class Application(Frame):
         self.QUIT.pack({"side": "left"})
 
         self.hi_there = Button(self)
-        self.hi_there["text"] = "Hello",
-        self.hi_there["command"] = self.say_hi
+        self.hi_there["text"] = "Login",
+        self.hi_there["command"] = self.login_chat
 
         self.hi_there.pack({"side": "left"})
 
